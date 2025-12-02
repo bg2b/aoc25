@@ -34,7 +34,8 @@ problem description itself was cute.  In whatever way, I found the
 problem unusually fun.  Each of these problems is either ⭐
 (recommended) or ⭐⭐ (highly recommended).
 
-None so far...
++ [Day 2: Gift Shop](https://adventofcode.com/2025/day/2) ⭐
+Brute force works, but it's interesting to do it faster
 
 ## Other years
 
