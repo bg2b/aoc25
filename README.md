@@ -36,6 +36,12 @@ problem unusually fun.  Each of these problems is either ⭐
 
 + [Day 2: Gift Shop](https://adventofcode.com/2025/day/2) ⭐
 Brute force works, but it's interesting to do it faster
++ [Day 8: Playground](https://adventofcode.com/2025/day/8) ⭐
+It's kind of obvious what to do, the question is how to do it quickly
++ [Day 9: Movie Theater](https://adventofcode.com/2025/day/9) ⭐
+This is cute; I may revise to ⭐⭐
++ [Day 10: Factory](https://adventofcode.com/2025/day/10) ⭐⭐
+If you enjoy search problems, you'll love part 2
 
 ## Other years
 
