@@ -118,6 +118,10 @@ vector<int> press(int button, int times, vector<int> const &remaining) {
 //
 // For solving it, I'll do a search and use the continuous LP as a
 // bounding heuristic.
+//
+// If I remembered better how the simplex algorithm worked, likely the
+// whole thing could be solved directly with a slight variant in
+// significantly less code.  For another time...
 
 // Basic simplex routine for the continuous problem
 // Adapted from an implementation in the Stanford ACM-ICPC repo

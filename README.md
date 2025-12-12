@@ -40,8 +40,10 @@ Brute force works, but it's interesting to do it faster
 It's kind of obvious what to do, the question is how to do it quickly
 + [Day 9: Movie Theater](https://adventofcode.com/2025/day/9) ⭐
 This is cute; I may revise to ⭐⭐
-+ [Day 10: Factory](https://adventofcode.com/2025/day/10) ⭐⭐
-If you enjoy search problems, you'll love part 2
++ [Day 10: Factory](https://adventofcode.com/2025/day/10) ⭐/⭐⭐
+I'm of mixed minds about part 2; it likely requires certain knowledge
+to do fast, but perhaps if you're very clever you can manage without.
+(I'm not clever enough.)
 
 ## Other years
 
