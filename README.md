@@ -38,12 +38,15 @@ problem unusually fun.  Each of these problems is either ⭐
 Brute force works, but it's interesting to do it faster
 + [Day 8: Playground](https://adventofcode.com/2025/day/8) ⭐
 It's kind of obvious what to do, the question is how to do it quickly
-+ [Day 9: Movie Theater](https://adventofcode.com/2025/day/9) ⭐
-This is cute; I may revise to ⭐⭐
++ [Day 9: Movie Theater](https://adventofcode.com/2025/day/9) ⭐⭐
+This is cute and has various ways to approach it
 + [Day 10: Factory](https://adventofcode.com/2025/day/10) ⭐/⭐⭐
 I'm of mixed minds about part 2; it likely requires certain knowledge
 to do fast, but perhaps if you're very clever you can manage without.
 (I'm not clever enough.)
+
+Overall I give this year ⭐.  It has some neat puzzles, but I kind of
+miss the full 25 days.
 
 ## Other years
 
@@ -61,3 +64,5 @@ rated with ⭐ or ⭐⭐.
 + [2017](https://github.com/bg2b/aoc17) ⭐
 + [2016](https://github.com/bg2b/aoc16) ⭐
 + [2015](https://github.com/bg2b/aoc15)
+
+![Advent calendar for 2025](advent.png)
