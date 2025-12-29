@@ -7,6 +7,7 @@
 #include <sstream>
 #include <optional>
 #include <algorithm>
+#include <vector>
 #include <numeric>
 #include <cassert>
 
