@@ -90,14 +90,12 @@ void organize_segs(vector<coord> const &red) {
 // segments can be either horizontal or vertical, so sometimes x means
 // y...)
 inline pair<int, int> find(int x, vector<pair<int, endpoints>> const &segs) {
-  auto l = lower_bound(segs.begin(), segs.end(), x,
-                       [](pair<int, endpoints> const &seg, int x) {
-                         return seg.first < x;
-                       });
-  auto u = upper_bound(segs.begin(), segs.end(), x,
-                       [](int x, pair<int, endpoints> const &seg) {
-                         return x < seg.first;
-                       });
+  auto l = lower_bound(
+      segs.begin(), segs.end(), x,
+      [](pair<int, endpoints> const &seg, int x) { return seg.first < x; });
+  auto u = upper_bound(
+      segs.begin(), segs.end(), x,
+      [](int x, pair<int, endpoints> const &seg) { return x < seg.first; });
   return {l - segs.begin(), u - segs.begin()};
 }
 

@@ -22,7 +22,7 @@ void solve(size_t num_bat) {
       // end be careful not to go too far.  The shifting leaves 0's
       // behind, indicating "unknown".
       size_t limit = num_bat - min(num_bat, line.length() - i);
-      for (size_t j = num_bat; j-- > limit; )
+      for (size_t j = num_bat; j-- > limit;)
         if (line[i] > joltage[j]) {
           joltage[j] = line[i];
           joltage[j + 1] = '0';

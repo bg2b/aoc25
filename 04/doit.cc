@@ -72,7 +72,7 @@ set<pair<int, int>> printing_dept::all_removable() const {
 
 int printing_dept::clean_up() {
   int result = 0;
-  for (auto to_remove = all_removable(); !to_remove.empty(); ) {
+  for (auto to_remove = all_removable(); !to_remove.empty();) {
     auto [x, y] = *to_remove.begin();
     to_remove.erase(to_remove.begin());
     grid[y][x] = '.';

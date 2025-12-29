@@ -65,8 +65,8 @@ void part1(vector<coord> const &red) {
 
 // Is point a strictly inside a bounding box?
 bool inside(coord const &ll, coord const &ur, coord const &a) {
-  return (ll.first < a.first && a.first < ur.first &&
-          ll.second < a.second && a.second < ur.second);
+  return ll.first < a.first && a.first < ur.first && ll.second < a.second &&
+         a.second < ur.second;
 }
 
 // Do two segments cross in their interior?
@@ -85,26 +85,26 @@ bool cross(coord a, coord b, coord c, coord d) {
   if (c.second > d.second)
     swap(c, d);
   // Cross iff strict containment in both directions
-  return (a.first < c.first && c.first < b.first &&
-          c.second < a.second && a.second < d.second);
+  return a.first < c.first && c.first < b.first && c.second < a.second &&
+         a.second < d.second;
 }
 
 // Does segment a-b cut through a bounding box?
 bool cuts(coord const &ll, coord const &ur, coord const &a, coord const &b) {
   coord lu{ur.first, ll.second};
   coord ul{ll.first, ur.second};
-  return (cross(ll, lu, a, b) || cross(lu, ur, a, b) ||
-          cross(ur, ul, a, b) || cross(ul, ll, a, b));
+  return cross(ll, lu, a, b) || cross(lu, ur, a, b) || cross(ur, ul, a, b) ||
+         cross(ul, ll, a, b);
 }
 
 // Is point c on the segment a-b (including endpoints)?
 bool is_on(coord const &c, coord const &a, coord const &b) {
   if (a.first == b.first)
-    return c.first == a.first &&
-      min(a.second, b.second) <= c.second && c.second <= max(a.second, b.second);
+    return c.first == a.first && min(a.second, b.second) <= c.second &&
+           c.second <= max(a.second, b.second);
   else
-    return c.second == a.second &&
-      min(a.first, b.first) <= c.first && c.first <= max(a.first, b.first);
+    return c.second == a.second && min(a.first, b.first) <= c.first &&
+           c.first <= max(a.first, b.first);
 }
 
 // Is point c inside or on the boundary of the polygon?

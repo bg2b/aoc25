@@ -29,9 +29,7 @@ coord operator-(coord const &c1, coord const &c2) {
   return {c1[0] - c2[0], c1[1] - c2[1], c1[2] - c2[2]};
 }
 
-long norm2(coord const &c) {
-  return c[0] * c[0] + c[1] * c[1] + c[2] * c[2];
-}
+long norm2(coord const &c) { return c[0] * c[0] + c[1] * c[1] + c[2] * c[2]; }
 
 // Squared Euclidean distance
 long distance2(coord const &c1, coord const &c2) { return norm2(c2 - c1); }
@@ -117,7 +115,7 @@ long boxes::connect(bool part1) {
       distances.push_back({distance2(cs[i], cs[j]), {i, j}});
   sort(distances.begin(), distances.end());
   sets circuits(n);
-  for (int k = 0; ; ) {
+  for (int k = 0;;) {
     auto [i, j] = distances[k++].second;
     int sz = circuits.onion(i, j);
     if (!part1 && sz == n)

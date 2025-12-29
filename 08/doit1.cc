@@ -99,8 +99,8 @@ vector<int> sets::biggest(unsigned k) const {
 }
 
 // Return a list of points that are at the smallest distances
-vector<pair<long, pair<int, int>>>
-coarsen(vector<coord> const &cs, int splits) {
+vector<pair<long, pair<int, int>>> coarsen(vector<coord> const &cs,
+                                           int splits) {
   // Get maximum coordinate
   long d = 0;
   for (auto const &c : cs)
@@ -190,7 +190,7 @@ long boxes::connect(bool part1) {
     sort(distances.begin(), distances.end());
     sets circuits(n);
     int max_k = distances.size();
-    for (int k = 0; k < max_k; ) {
+    for (int k = 0; k < max_k;) {
       auto [i, j] = distances[k++].second;
       int sz = circuits.onion(i, j);
       if (part1 && k == to_connect) {

@@ -35,7 +35,12 @@ struct machine {
 
 machine::machine(string const &line) {
   stringstream ss(line);
-  auto snarf = [&]() { string s; ss >> s; assert(s.length() > 2); return s; };
+  auto snarf = [&]() {
+    string s;
+    ss >> s;
+    assert(s.length() > 2);
+    return s;
+  };
   auto target = snarf();
   for (size_t i = 1; i + 1 < target.length(); ++i)
     if (target[i] == '#')
@@ -87,9 +92,7 @@ int machine::lights() const {
 inline int num_affected(int button) { return popcount(unsigned(button)); }
 
 // Does a button affect the given position?
-inline bool affects(int button, int pos) {
-  return (button & (1 << pos)) != 0;
-}
+inline bool affects(int button, int pos) { return (button & (1 << pos)) != 0; }
 
 // Press the given button the given number of times
 vector<int> press(int button, int times, vector<int> const &remaining) {
@@ -126,6 +129,7 @@ vector<int> press(int button, int times, vector<int> const &remaining) {
 // Basic simplex routine for the continuous problem
 // Adapted from an implementation in the Stanford ACM-ICPC repo
 // https://github.com/jaehyunp/stanfordacm/blob/master/code/Simplex.cc
+// clang-format off
 namespace simplex {
 // MIT License
 //
@@ -242,6 +246,7 @@ struct LPSolver {
   }
 };
 }
+// clang-format on
 
 // Compute a lower bound for the number of presses based on the
 // continuous LP.  If the solution happens to be all integer, the
